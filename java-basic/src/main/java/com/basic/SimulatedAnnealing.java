@@ -1,4 +1,4 @@
-package com.java.basics;
+package com.basic;
 
 import java.util.Random;
 import java.lang.Math;

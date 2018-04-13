@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Kodilla.iml" filepath="$PROJECT_DIR$/.idea/modules/Kodilla.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Kodilla_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Kodilla_main.iml" group="Kodilla" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Kodilla_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Kodilla_test.iml" group="Kodilla" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-basic.iml" filepath="$PROJECT_DIR$/.idea/modules/java-basic.iml" group="java-basic" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-basic/java-basic_main.iml" filepath="$PROJECT_DIR$/.idea/modules/java-basic/java-basic_main.iml" group="java-basic" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java-basic/java-basic_test.iml" filepath="$PROJECT_DIR$/.idea/modules/java-basic/java-basic_test.iml" group="java-basic" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kodilla-testing.iml" filepath="$PROJECT_DIR$/.idea/modules/kodilla-testing.iml" group="kodilla-testing" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kodilla-testing/kodilla-testing_main.iml" filepath="$PROJECT_DIR$/.idea/modules/kodilla-testing/kodilla-testing_main.iml" group="kodilla-testing" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/kodilla-testing/kodilla-testing_test.iml" filepath="$PROJECT_DIR$/.idea/modules/kodilla-testing/kodilla-testing_test.iml" group="kodilla-testing" />
