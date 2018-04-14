@@ -1,4 +1,7 @@
+
+
 package com.kodilla.testing.collection;
+
 
 import org.junit.*;
 import com.google.common.collect.Lists;
@@ -43,14 +46,11 @@ public class CollectionTestSuite {
                 }else{
                     eventExists=true;
                 }
-
                 }
-
                 if(oddExists & eventExists){
                    Assert.assertNotEquals(testingArray,givenArray);
                 }
             }
-
     }
 
 
