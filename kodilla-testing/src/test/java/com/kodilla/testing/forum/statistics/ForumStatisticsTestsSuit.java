@@ -47,56 +47,178 @@ public class ForumStatisticsTestsSuit {
 
 
     @Test
-    public void testsStatisticsCalculator(){
-        Statistics statisticsMock= mock(Statistics.class);
-        List<String> usLs1=Lists.newArrayList();
-        List<String> usLs2=Lists.newArrayList();
-        for (int i=0;i<100;i++){
-            usLs2.add("User"+i);
+    public void testsStatisticsCalculatorZeroPosts() {
+        Statistics statisticsMock = mock(Statistics.class);
+        List<String> usLs1 = Lists.newArrayList();
+        List<String> usLs2 = Lists.newArrayList();
+        for (int i = 0; i < 100; i++) {
+            usLs2.add("User" + i);
         }
-        int postsCount1=0;
-        int postsCount2=1000;
-        int commentsCount1=0;
-        int commentsCount2=100;
 
-
+        int postsCount1 = 0;
 
 
         when(statisticsMock.postsCount()).thenReturn(postsCount1);
-        when(statisticsMock.commentsCount()).thenReturn(commentsCount2);
-        when(statisticsMock.usersNames()).thenReturn(usLs1);
-        StatisticsCalculator sc=new StatisticsCalculator();
-        sc.calculateAdvStatistics(statisticsMock);
-        Assert.assertEquals(0,sc.avgCommentsPerPosts,0);
-
-
-
-        when(statisticsMock.postsCount()).thenReturn(postsCount2);
-        when(statisticsMock.commentsCount()).thenReturn(commentsCount2);
         when(statisticsMock.usersNames()).thenReturn(usLs2);
-        sc=new StatisticsCalculator();
+        StatisticsCalculator sc = new StatisticsCalculator();
         sc.calculateAdvStatistics(statisticsMock);
-        Assert.assertEquals(1,sc.avgCommentsPerUser,0);
-
-
-        when(statisticsMock.postsCount()).thenReturn(postsCount2);
-        when(statisticsMock.commentsCount()).thenReturn(commentsCount2);
-        when(statisticsMock.usersNames()).thenReturn(usLs2);
-        sc=new StatisticsCalculator();
-        sc.calculateAdvStatistics(statisticsMock);
-        Assert.assertEquals(0.1,sc.avgCommentsPerPosts,0);
-
-
-        when(statisticsMock.postsCount()).thenReturn(postsCount2);
-        when(statisticsMock.commentsCount()).thenReturn(commentsCount2);
-        when(statisticsMock.usersNames()).thenReturn(usLs2);
-        sc=new StatisticsCalculator();
-        sc.calculateAdvStatistics(statisticsMock);
-        Assert.assertEquals(10,sc.avgPostsPerUser,0);
-
+        Assert.assertEquals(0, sc.avgCommentsPerPosts, 0);
+        Assert.assertEquals(0, sc.avgPostsPerUser, 0);
+        Assert.assertEquals(0, sc.avgCommentsPerUser, 0);
 
 
     }
+
+
+    @Test
+    public void testsStatisticsCalculator1000posts() {
+        Statistics statisticsMock = mock(Statistics.class);
+        List<String> usLs1 = Lists.newArrayList();
+        List<String> usLs2 = Lists.newArrayList();
+        for (int i = 0; i < 100; i++) {
+            usLs2.add("User" + i);
+        }
+
+        int postsCount1 = 1000;
+
+
+        when(statisticsMock.postsCount()).thenReturn(postsCount1);
+        when(statisticsMock.usersNames()).thenReturn(usLs2);
+        StatisticsCalculator sc = new StatisticsCalculator();
+        sc.calculateAdvStatistics(statisticsMock);
+        Assert.assertEquals(0, sc.avgCommentsPerPosts, 0);
+        Assert.assertEquals(10, sc.avgPostsPerUser, 0);
+        Assert.assertEquals(0, sc.avgCommentsPerUser, 0);
+
+
+    }
+
+
+    @Test
+    public void testsStatisticsCalculatorZeroComments() {
+        Statistics statisticsMock = mock(Statistics.class);
+        List<String> usLs1 = Lists.newArrayList();
+        List<String> usLs2 = Lists.newArrayList();
+        for (int i = 0; i < 100; i++) {
+            usLs2.add("User" + i);
+        }
+
+        int commentsCount = 0;
+
+
+        when(statisticsMock.commentsCount()).thenReturn(commentsCount);
+        when(statisticsMock.usersNames()).thenReturn(usLs2);
+        StatisticsCalculator sc = new StatisticsCalculator();
+        sc.calculateAdvStatistics(statisticsMock);
+        Assert.assertEquals(0, sc.avgCommentsPerPosts, 0);
+        Assert.assertEquals(0, sc.avgPostsPerUser, 0);
+        Assert.assertEquals(0, sc.avgCommentsPerUser, 0);
+
+
+    }
+
+
+    @Test
+    public void testsStatisticsCalculatorMorePostsThenComments() {
+        Statistics statisticsMock = mock(Statistics.class);
+        List<String> usLs1 = Lists.newArrayList();
+        List<String> usLs2 = Lists.newArrayList();
+        for (int i = 0; i < 100; i++) {
+            usLs2.add("User" + i);
+        }
+
+        int commentsCount = 100;
+        int postCount = 1000;
+
+        when(statisticsMock.commentsCount()).thenReturn(commentsCount);
+        when(statisticsMock.postsCount()).thenReturn(postCount);
+        when(statisticsMock.usersNames()).thenReturn(usLs2);
+        StatisticsCalculator sc = new StatisticsCalculator();
+        sc.calculateAdvStatistics(statisticsMock);
+        Assert.assertEquals(0.1, sc.avgCommentsPerPosts, 0);
+        Assert.assertEquals(10, sc.avgPostsPerUser, 0);
+        Assert.assertEquals(1, sc.avgCommentsPerUser, 0);
+
+
+    }
+
+
+
+    @Test
+    public void testsStatisticsCalculatorMoreCommentsThenPosts() {
+        Statistics statisticsMock = mock(Statistics.class);
+        List<String> usLs1 = Lists.newArrayList();
+        List<String> usLs2 = Lists.newArrayList();
+        for (int i = 0; i < 100; i++) {
+            usLs2.add("User" + i);
+        }
+
+        int commentsCount = 1000;
+        int postCount = 100;
+
+        when(statisticsMock.commentsCount()).thenReturn(commentsCount);
+        when(statisticsMock.postsCount()).thenReturn(postCount);
+        when(statisticsMock.usersNames()).thenReturn(usLs2);
+        StatisticsCalculator sc = new StatisticsCalculator();
+        sc.calculateAdvStatistics(statisticsMock);
+        Assert.assertEquals(10, sc.avgCommentsPerPosts, 0);
+        Assert.assertEquals(1, sc.avgPostsPerUser, 0);
+        Assert.assertEquals(10, sc.avgCommentsPerUser, 0);
+
+
+    }
+
+
+    @Test
+    public void testsStatisticsCalculatorZerroUsers() {
+        Statistics statisticsMock = mock(Statistics.class);
+        List<String> usLs1 = Lists.newArrayList();
+        List<String> usLs2 = Lists.newArrayList();
+        for (int i = 0; i < 100; i++) {
+            usLs2.add("User" + i);
+        }
+
+        int commentsCount = 1000;
+        int postCount = 1000;
+
+        when(statisticsMock.commentsCount()).thenReturn(commentsCount);
+        when(statisticsMock.postsCount()).thenReturn(postCount);
+        when(statisticsMock.usersNames()).thenReturn(usLs1);
+        StatisticsCalculator sc = new StatisticsCalculator();
+        sc.calculateAdvStatistics(statisticsMock);
+        Assert.assertEquals(0, sc.avgCommentsPerPosts, 0);
+        Assert.assertEquals(0, sc.avgPostsPerUser, 0);
+        Assert.assertEquals(0, sc.avgCommentsPerUser, 0);
+
+
+    }
+
+
+    @Test
+    public void testsStatisticsCalculator100Users() {
+        Statistics statisticsMock = mock(Statistics.class);
+        List<String> usLs1 = Lists.newArrayList();
+        List<String> usLs2 = Lists.newArrayList();
+        for (int i = 0; i < 100; i++) {
+            usLs2.add("User" + i);
+        }
+
+        int commentsCount = 1000;
+        int postCount = 10000;
+
+        when(statisticsMock.commentsCount()).thenReturn(commentsCount);
+        when(statisticsMock.postsCount()).thenReturn(postCount);
+        when(statisticsMock.usersNames()).thenReturn(usLs2);
+        StatisticsCalculator sc = new StatisticsCalculator();
+        sc.calculateAdvStatistics(statisticsMock);
+        Assert.assertEquals(0.1, sc.avgCommentsPerPosts, 0);
+        Assert.assertEquals(100, sc.avgPostsPerUser, 0);
+        Assert.assertEquals(10, sc.avgCommentsPerUser, 0);
+
+
+    }
+
+
 
 
 

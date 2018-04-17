@@ -19,14 +19,15 @@ public class StatisticsCalculator{
     public double avgCommentsPerPosts=0;
    void calculateAdvStatistics(Statistics statistics){
        if(statistics.usersNames().size()>0) {
-
-           this.usersNumber = statistics.usersNames().size();
-           this.postsCount = statistics.postsCount();
-           this.commentsCount = statistics.commentsCount();
-           this.avgPostsPerUser = statistics.postsCount() / statistics.usersNames().size();
-           this.avgCommentsPerUser = statistics.commentsCount() / statistics.usersNames().size();
-           this.avgCommentsPerPosts = (double) statistics.commentsCount() / statistics.postsCount();
-       }
+        if(statistics.postsCount()>0) {
+    this.usersNumber = statistics.usersNames().size();
+    this.postsCount = statistics.postsCount();
+    this.commentsCount = statistics.commentsCount();
+    this.avgPostsPerUser = statistics.postsCount() / statistics.usersNames().size();
+    this.avgCommentsPerUser = statistics.commentsCount() / statistics.usersNames().size();
+    this.avgCommentsPerPosts = (double) statistics.commentsCount() / statistics.postsCount();
+    }
+}
 
    }
 
