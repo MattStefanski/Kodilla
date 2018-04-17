@@ -8,11 +8,9 @@
 
 package com.kodilla.testing.shape;
 import static org.junit.Assert.*;
-
 import com.google.common.collect.Lists;
 import org.junit.*;
 import org.junit.rules.TestName;
-import com.kodilla.testing.shape.ShapeCollector;
 
 public class ShapeCollectorTestSuite {
 
@@ -43,7 +41,7 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testAddingShape(){
 
-        int givenCollectorSizeAffter=5;
+
         ShapeCollector testedCollector=new ShapeCollector(Lists.newArrayList(new Circle(2),new Circle(2),new Square(3,4),new Square(3,4)));
 
         assertEquals(4,testedCollector.getShapes().size());
@@ -58,7 +56,6 @@ public class ShapeCollectorTestSuite {
 
     @Test
     public void testRmvByName(){
-        String givenName="Square";
         ShapeCollector testedCollector=new ShapeCollector(Lists.newArrayList(new Circle(2),new Circle(2),new Square(3,4),new Square(3,4),new Triangle(3,4)));
         testedCollector.rmvShapesByName("Square");
         for (Shape shape:testedCollector.getShapes()){
@@ -73,8 +70,6 @@ public class ShapeCollectorTestSuite {
     @Test
     public void testRmvByPos(){
         int givenPos=4;
-        int givenSize=5;
-        String givenShape="Triangle";
         ShapeCollector testedCollector=new ShapeCollector(Lists.newArrayList(new Circle(2),new Circle(2),new Square(3,4),new Square(3,4),new Triangle(3,4)));
 
         assertEquals(5,testedCollector.getShapes().size());
@@ -89,7 +84,6 @@ public class ShapeCollectorTestSuite {
 
     @Test
     public void testGetFigureByPos(){
-        int givenPos=2;
         ShapeCollector testedCollector=new ShapeCollector(Lists.newArrayList(new Circle(2),new Circle(2),new Square(3,4),new Triangle(3,4)));
         assertEquals("Square",testedCollector.getShapes().get(2).getShapeName());
 
