@@ -67,16 +67,22 @@ class Knight{
 
 
 class SimulatedAnnealing {
-    public static void main(String[] args){
+//    public static void main(String[] args){
+//
+//        Knight kn=new Knight();
+//
+//
+//        kn.simulatedAnnealing(new DeadIslandQuest(),5.00,0.94,89,0.34,10000);
+//
+//
+//        kn.simulatedAnnealing(new EliteKnightQuest(),5.00,0.94,89,0.34,10000);
+//
+//    }
 
-        Knight kn=new Knight();
 
-
-        kn.simulatedAnnealing(new DeadIslandQuest(),5.00,0.94,89,0.34,10000);
-
-
-        kn.simulatedAnnealing(new EliteKnightQuest(),5.00,0.94,89,0.34,10000);
-
+    public static void main(String[] args) {
+        String lam;
+       lam= (a,b)-> System.out.println("Stop"+a);
     }
 
 
