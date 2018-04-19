@@ -1,4 +1,6 @@
 rootProject.name = 'Kodilla'
 include 'kodilla-testing'
 include 'java-basic'
+include 'com.kodilla.stream'
+include 'kodilla-stream'
 

@@ -1,4 +1,11 @@
 /*
+ * Created by Matt Stefanski on 4/19/18 11:03 PM
+ *
+ * Copyright (c) 2018. All rights reserved
+ *
+ * Last modified 4/19/18 11:03 PM
+ */
+/*
  * Created by Matt Stefanski on 4/18/18 11:39 PM
  *
  * Copyright (c) 2018. All rights reserved
@@ -8,17 +15,12 @@
 
 package com.kodilla.stream;
 
-import com.google.common.collect.Lists;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 public class PoemBeautifier {
-
-
-
 
 
     public static void main(String[] args) {
@@ -31,7 +33,7 @@ public class PoemBeautifier {
             Collections.shuffle(tmp);
             String result =String.join(" | ",tmp);
             System.out.println(result);
-            } ;
+        } ;
         stringBeautifyUpper.decorate("Lived as a devil");
         stringBeautifyAddABC.decorate("Lived as a devil");
         stringBeautifyReverse.decorate("Lived as a devil");
