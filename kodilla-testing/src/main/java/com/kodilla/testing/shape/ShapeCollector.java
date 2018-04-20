@@ -124,7 +124,7 @@ public class ShapeCollector {
             this.shapes.removeIf(i->i.getShapeName().equals(shapeName));
         }
 
-        Shape getFigureByPos(int pos){
+       public Shape getFigureByPos(int pos){
             return this.shapes.get(pos);
 
         }
