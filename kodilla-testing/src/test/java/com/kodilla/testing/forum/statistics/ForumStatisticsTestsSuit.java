@@ -49,7 +49,6 @@ public class ForumStatisticsTestsSuit {
     @Test
     public void testsStatisticsCalculatorZeroPosts() {
         Statistics statisticsMock = mock(Statistics.class);
-        List<String> usLs1 = Lists.newArrayList();
         List<String> usLs2 = Lists.newArrayList();
         for (int i = 0; i < 100; i++) {
             usLs2.add("User" + i);
@@ -62,7 +61,7 @@ public class ForumStatisticsTestsSuit {
         when(statisticsMock.usersNames()).thenReturn(usLs2);
         StatisticsCalculator sc = new StatisticsCalculator();
         sc.calculateAdvStatistics(statisticsMock);
-        Assert.assertEquals(0, sc.avgCommentsPerPosts, 0);
+        Assert.assertEquals(Double.NaN, sc.avgCommentsPerPosts, 0);
         Assert.assertEquals(0, sc.avgPostsPerUser, 0);
         Assert.assertEquals(0, sc.avgCommentsPerUser, 0);
 
@@ -73,7 +72,6 @@ public class ForumStatisticsTestsSuit {
     @Test
     public void testsStatisticsCalculator1000posts() {
         Statistics statisticsMock = mock(Statistics.class);
-        List<String> usLs1 = Lists.newArrayList();
         List<String> usLs2 = Lists.newArrayList();
         for (int i = 0; i < 100; i++) {
             usLs2.add("User" + i);
@@ -97,7 +95,6 @@ public class ForumStatisticsTestsSuit {
     @Test
     public void testsStatisticsCalculatorZeroComments() {
         Statistics statisticsMock = mock(Statistics.class);
-        List<String> usLs1 = Lists.newArrayList();
         List<String> usLs2 = Lists.newArrayList();
         for (int i = 0; i < 100; i++) {
             usLs2.add("User" + i);
@@ -110,7 +107,7 @@ public class ForumStatisticsTestsSuit {
         when(statisticsMock.usersNames()).thenReturn(usLs2);
         StatisticsCalculator sc = new StatisticsCalculator();
         sc.calculateAdvStatistics(statisticsMock);
-        Assert.assertEquals(0, sc.avgCommentsPerPosts, 0);
+        Assert.assertEquals(Double.NaN, sc.avgCommentsPerPosts, 0);
         Assert.assertEquals(0, sc.avgPostsPerUser, 0);
         Assert.assertEquals(0, sc.avgCommentsPerUser, 0);
 
@@ -121,7 +118,6 @@ public class ForumStatisticsTestsSuit {
     @Test
     public void testsStatisticsCalculatorMorePostsThenComments() {
         Statistics statisticsMock = mock(Statistics.class);
-        List<String> usLs1 = Lists.newArrayList();
         List<String> usLs2 = Lists.newArrayList();
         for (int i = 0; i < 100; i++) {
             usLs2.add("User" + i);
@@ -147,7 +143,6 @@ public class ForumStatisticsTestsSuit {
     @Test
     public void testsStatisticsCalculatorMoreCommentsThenPosts() {
         Statistics statisticsMock = mock(Statistics.class);
-        List<String> usLs1 = Lists.newArrayList();
         List<String> usLs2 = Lists.newArrayList();
         for (int i = 0; i < 100; i++) {
             usLs2.add("User" + i);
@@ -170,13 +165,10 @@ public class ForumStatisticsTestsSuit {
 
 
     @Test
-    public void testsStatisticsCalculatorZerroUsers() {
+    public void testsStatisticsCalculatorZeroUsers() {
         Statistics statisticsMock = mock(Statistics.class);
         List<String> usLs1 = Lists.newArrayList();
-        List<String> usLs2 = Lists.newArrayList();
-        for (int i = 0; i < 100; i++) {
-            usLs2.add("User" + i);
-        }
+
 
         int commentsCount = 1000;
         int postCount = 1000;
@@ -186,9 +178,9 @@ public class ForumStatisticsTestsSuit {
         when(statisticsMock.usersNames()).thenReturn(usLs1);
         StatisticsCalculator sc = new StatisticsCalculator();
         sc.calculateAdvStatistics(statisticsMock);
-        Assert.assertEquals(0, sc.avgCommentsPerPosts, 0);
-        Assert.assertEquals(0, sc.avgPostsPerUser, 0);
-        Assert.assertEquals(0, sc.avgCommentsPerUser, 0);
+        Assert.assertEquals(1, sc.avgCommentsPerPosts, 0);
+        Assert.assertEquals(Double.POSITIVE_INFINITY, sc.avgPostsPerUser, 0);
+        Assert.assertEquals(Double.POSITIVE_INFINITY, sc.avgCommentsPerUser, 0);
 
 
     }
@@ -197,7 +189,6 @@ public class ForumStatisticsTestsSuit {
     @Test
     public void testsStatisticsCalculator100Users() {
         Statistics statisticsMock = mock(Statistics.class);
-        List<String> usLs1 = Lists.newArrayList();
         List<String> usLs2 = Lists.newArrayList();
         for (int i = 0; i < 100; i++) {
             usLs2.add("User" + i);

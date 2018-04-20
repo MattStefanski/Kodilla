@@ -18,18 +18,16 @@ public class StatisticsCalculator{
     public double avgCommentsPerUser=0;
     public double avgCommentsPerPosts=0;
    void calculateAdvStatistics(Statistics statistics){
-       if(statistics.usersNames().size()>0) {
-        if(statistics.postsCount()>0) {
-    this.usersNumber = statistics.usersNames().size();
-    this.postsCount = statistics.postsCount();
-    this.commentsCount = statistics.commentsCount();
-    this.avgPostsPerUser = statistics.postsCount() / statistics.usersNames().size();
-    this.avgCommentsPerUser = statistics.commentsCount() / statistics.usersNames().size();
+    this.usersNumber = (double) statistics.usersNames().size();
+    this.postsCount =(double)  statistics.postsCount();
+    this.commentsCount = (double)  statistics.commentsCount();
+    this.avgPostsPerUser = (double)  statistics.postsCount() / statistics.usersNames().size();
+    this.avgCommentsPerUser = (double) statistics.commentsCount() / statistics.usersNames().size();
     this.avgCommentsPerPosts = (double) statistics.commentsCount() / statistics.postsCount();
     }
-}
 
-   }
+
+
 
     void showStatistics(){
         System.out.println("Number of users: "+this.usersNumber);
@@ -39,5 +37,7 @@ public class StatisticsCalculator{
         System.out.println("Average number of comments per user: "+this.avgCommentsPerUser);
         System.out.println("Average number of comments per post: "+this.avgCommentsPerPosts);
     }
+
+
 
 }
