@@ -1,4 +1,6 @@
+
 package com.kodilla.testing.collection;
+
 
 import org.junit.*;
 import com.google.common.collect.Lists;
@@ -6,7 +8,9 @@ import org.junit.rules.TestName;
 import com.kodilla.testing.collection.OddNumbersExterminator.*;
 
 import java.util.ArrayList;
+
 import java.util.List;
+
 
 public class CollectionTestSuite {
 
@@ -24,13 +28,15 @@ public class CollectionTestSuite {
     @Test
          public void testNullArrayList(){
 
+
            List<Integer> nullArray=new ArrayList<>();
            List<Integer>testingArray=new OddNumbersExterminator().exterminate(Lists.newArrayList());
-           Assert.assertEquals(testingArray,nullArray);
+
 
     }
     @Test
         public void testRemovingOdds(){
+
         //Given
         ArrayList<Integer> givenArray = Lists.newArrayList(2, 3, 4, 1, 2);
 
@@ -41,6 +47,7 @@ public class CollectionTestSuite {
         for(Integer integer : testingArray){
             Assert.assertTrue(integer % 2 == 0);
         }
+
 
     }
 

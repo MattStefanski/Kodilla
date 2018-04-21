@@ -3,6 +3,7 @@ import java.util.*;
 import com.google.common.collect.*;
 public class OddNumbersExterminator {
 
+
     public List<Integer> exterminate(List<Integer> number) {
 
         List<Integer> result = Lists.newArrayList();
@@ -13,6 +14,7 @@ public class OddNumbersExterminator {
             }
         }
         return result;
+
     }
 
 
