@@ -3,31 +3,17 @@ import java.util.*;
 import com.google.common.collect.*;
 public class OddNumbersExterminator {
 
-    ArrayList<Integer>  exterminate(ArrayList<Integer> numbers){
-     ArrayList<Integer> arr=numbers;
-     ArrayList<Integer> arr2=Lists.newArrayList();
-    if (arr.size()==0){
-        arr=null;
-    }else {
 
-        for (int i = 0; i < arr.size(); i++) {
+    public List<Integer> exterminate(List<Integer> number) {
 
-            if ((arr.get(i) % 2) == 0) {
-                if (!arr2.contains(arr.get(i))) {
+        List<Integer> result = Lists.newArrayList();
 
-                    arr2.add(arr.get(i));
-                }
-            }
-
-        }
-
-
-        for (int i = 0; i < arr2.size(); i++) {
-            while (arr.remove(arr2.get(i))) {
+        for (Integer integer : number) {
+            if (integer % 2 == 0) {
+                result.add(integer);
             }
         }
-    }
-     return arr;
+        return result;
 
     }
 
