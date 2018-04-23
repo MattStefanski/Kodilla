@@ -7,7 +7,7 @@
  */
 
 package com.kodilla.stream.forumuser;
-import java.util.ArrayList;
+
 import java.util.stream.Collectors;
 import java.util.Map;
 public class StreamMain {
