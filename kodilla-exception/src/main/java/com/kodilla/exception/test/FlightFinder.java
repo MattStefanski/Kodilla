@@ -26,9 +26,9 @@ public class FlightFinder{
 
         try{
             if(flightChecker.get(flight.arrivalAirport)){
-                System.out.println("The flight does exists");
+                System.out.println("The route does exists");
             }else {
-                System.out.println("The flight does not exists");
+                System.out.println("The route does not exists");
             }
 
         }catch(Exception e) {
