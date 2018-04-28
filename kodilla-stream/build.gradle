@@ -12,4 +12,5 @@ repositories {
 dependencies {
     compile 'com.google.guava:guava:24.1-jre'
     testCompile('junit:junit:4.12')
+    testCompile group: 'org.mockito', name: 'mockito-core', version: '2.13.0'
 }
