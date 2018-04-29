@@ -9,12 +9,14 @@
 package com.kodilla.exception.test;
 
 public class Flight {
-    public String departureAirport;
-    public String arrivalAirport;
+    private String departureAirport;
+    private String arrivalAirport;
 
-    public Flight(String departureAirtport, String arrivalAirport){
-        this.departureAirport=departureAirtport;
+    public Flight(String departureAirport, String arrivalAirport){
+        this.departureAirport=departureAirport;
         this.arrivalAirport=arrivalAirport;
     }
-
+    public String getArrivalAirport() {
+        return arrivalAirport;
+    }
 }
