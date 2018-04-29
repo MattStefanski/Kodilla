@@ -24,16 +24,13 @@ public class FlightFinder {
         flightChecker.put("LHR", Boolean.TRUE);
 
 
-        try {
-            if (flightChecker.get(flight.getArrivalAirport())) {
+
+            if (flightChecker.containsKey(flight.getArrivalAirport())) {
                 System.out.println("The route does exists");
             } else {
-                System.out.println("The route does not exists");
+                throw new RouteNotFoundException();
             }
 
-        } catch (Exception e) {
-            throw new RouteNotFoundException();
-        }
 
 
     }
