@@ -25,7 +25,7 @@ public class FlightFinder{
 
 
         try{
-            if(flightChecker.containsKey(flight.getArrivalAirport())){
+            if(flightChecker.get(flight.getArrivalAirport())){
                 System.out.println("The route does exists");
             }else {
                 System.out.println("The route does not exists");
