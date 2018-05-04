@@ -95,6 +95,7 @@ public class BoardTestSuite {
                 .map(n -> ChronoUnit.DAYS.between(n.getCreated(), n.getDeadline()))
                 .mapToDouble(n -> n).average().orElseThrow(IllegalStateException::new);
         //Then
+
         Assert.assertEquals(18.333, averageTimeInProgress, 0.001);
 
     }
