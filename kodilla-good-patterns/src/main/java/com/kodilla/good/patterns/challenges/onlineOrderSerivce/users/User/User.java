@@ -1,12 +1,14 @@
 /*
- * Created by Matt Stefanski on 5/4/18 11:05 AM
+ * Created by Matt Stefanski on 5/8/18 8:34 PM
  *
  * Copyright (c) 2018. All rights reserved
  *
- * Last modified 5/4/18 11:05 AM
+ * Last modified 5/8/18 1:16 AM
  */
 
-package com.kodilla.good.patterns.challenges;
+package com.kodilla.good.patterns.challenges.User;
+
+import com.kodilla.good.patterns.challenges.product.Product;
 
 import java.util.ArrayList;
 

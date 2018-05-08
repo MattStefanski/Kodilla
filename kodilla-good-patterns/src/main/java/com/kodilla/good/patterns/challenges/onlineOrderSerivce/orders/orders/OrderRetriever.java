@@ -1,13 +1,16 @@
 /*
- * Created by Matt Stefanski on 5/8/18 12:21 AM
+ * Created by Matt Stefanski on 5/8/18 8:37 PM
  *
  * Copyright (c) 2018. All rights reserved
  *
- * Last modified 5/8/18 12:21 AM
+ * Last modified 5/8/18 8:35 PM
  */
 
-package com.kodilla.good.patterns.challenges;
+package com.kodilla.good.patterns.challenges.OnlineOrderService.orders;
 import com.google.common.collect.Lists;
+import com.kodilla.good.patterns.challenges.product.Product;
+import com.kodilla.good.patterns.challenges.User.User;
+
 public class OrderRetriever {
 
 

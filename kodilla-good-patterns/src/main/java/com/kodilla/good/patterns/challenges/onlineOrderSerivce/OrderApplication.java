@@ -8,6 +8,9 @@
 
 package com.kodilla.good.patterns.challenges;
 
+import com.kodilla.good.patterns.challenges.OnlineOrderService.orders.*;
+import com.kodilla.good.patterns.challenges.orders.*;
+
 public class OrderApplication {
 
 
