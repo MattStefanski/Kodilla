@@ -1,12 +1,12 @@
 /*
- * Created by Matt Stefanski on 5/8/18 8:35 PM
+ * Created by Matt Stefanski on 5/8/18 8:41 PM
  *
  * Copyright (c) 2018. All rights reserved
  *
- * Last modified 5/8/18 2:11 AM
+ * Last modified 5/8/18 8:38 PM
  */
 
-package com.kodilla.good.patterns.challenges.product;
+package com.kodilla.good.patterns.challenges.onlineOrderSerivce.products.product;
 
 public class Product {
 
