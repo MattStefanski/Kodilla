@@ -13,14 +13,13 @@ import com.kodilla.good.patterns.challenges.onlineOrderSerivce.users.User.User;
 
 public class CompleteOrder {
 
-    public  boolean completed(Order order, User buyer, User seller){
+    public  boolean checkIfCompleted(User buyer, User seller){
         boolean stockOK=true;
-
-        for (Product prod: buyer.getBasket()){
-            if(!seller.getOffer().contains(prod)) {
-                stockOK = false;
-            }
-        }
+      //  for (Product prod: buyer.getBasket()){
+       //     if(!seller.getOffer().contains(prod)) {
+         //       stockOK = false;
+          //  }
+     //   }
         return stockOK;
     }
 

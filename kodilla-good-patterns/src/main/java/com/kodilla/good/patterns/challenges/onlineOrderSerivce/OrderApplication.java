@@ -16,7 +16,7 @@ public class OrderApplication {
 
     public static void main(String[] args) {
         OrderRetriever orderRetriever=new OrderRetriever();
-        ProductOrderService productOrderService=new ProductOrderService(new InfoService(),new CompleteOrder(),new Repository());
+        ProductOrderService productOrderService=new ProductOrderService(new CompleteOrder(),new Repository());
         productOrderService.process(orderRetriever);
     }
 }

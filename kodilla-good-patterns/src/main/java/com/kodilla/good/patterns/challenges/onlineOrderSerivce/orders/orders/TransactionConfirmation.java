@@ -13,9 +13,9 @@ import com.kodilla.good.patterns.challenges.onlineOrderSerivce.users.User.User;
 
 public interface TransactionConfirmation {
 
-    void sendInfoToBuyer(Integer orderID, User buyer, User seller, String orderStatus);
+    void sendInfoToBuyer(Integer orderID, User buyer, User seller, Status orderStatus);
 
-    void sendInfoToSeller(Integer orderID, User buyer, User seller,String orderStatus);
+    void sendInfoToSeller(Integer orderID, User buyer, User seller,Status orderStatus);
 
 
 }

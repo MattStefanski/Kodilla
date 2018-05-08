@@ -13,32 +13,27 @@ import com.kodilla.good.patterns.challenges.onlineOrderSerivce.users.User.User;
 
 public class ProductOrderService {
 
-    private Integer orderID;
-    private User buyer;
-    private User seller;
-    private String status;
 
 
-    private InfoService infoService;
+
     private CompleteOrder completeOrder;
     private Repository orderRepository;
 
-    public ProductOrderService(final InfoService infoService, final CompleteOrder completOrder, final Repository orderRepository) {
-        this.infoService = infoService;
-        this.completeOrder = completOrder;
+    public ProductOrderService(final CompleteOrder completeOrder, final Repository orderRepository) {
+        this.completeOrder = completeOrder;
         this.orderRepository = orderRepository;
     }
 
     public OrderDto process(final OrderRetriever orderRetriever) {
 
-       boolean  orderOK= completeOrder.completed(orderRetriever.getOrd(),orderRetriever.getBuyer(),orderRetriever.getSeller());
+        boolean  orderOK= this.completeOrder.checkIfCompleted(orderRetriever.getBuyer(),orderRetriever.getSeller());
 
         if(orderOK) {
-            infoService.sendInfo(orderRetriever.getOrd(),"completed");
+           InfoService.sendInfo(orderRetriever.getOrd(),Status.Completed);
             orderRepository.saveOrder(orderRetriever.getOrd());
             return new OrderDto(orderRetriever.getOrd(), true);
         } else {
-            infoService.sendInfo(orderRetriever.getOrd(),"failed");
+            InfoService.sendInfo(orderRetriever.getOrd(),Status.Failed);
             return new OrderDto(orderRetriever.getOrd(), false);
         }
     }

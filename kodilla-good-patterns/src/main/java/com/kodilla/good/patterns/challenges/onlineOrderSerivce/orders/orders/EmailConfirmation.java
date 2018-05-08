@@ -13,12 +13,12 @@ import com.kodilla.good.patterns.challenges.onlineOrderSerivce.users.User.User;
 public class EmailConfirmation implements TransactionConfirmation {
 
     @Override
-    public void sendInfoToBuyer(Integer orderID, User buyer, User seller, String status){
+    public void sendInfoToBuyer(Integer orderID, User buyer, User seller, Status status){
         System.out.println("Status of the order number " + orderID +" has changed to " + status);
     }
 
     @Override
-    public void sendInfoToSeller(Integer orderID, User buyer, User seller, String status){
+    public void sendInfoToSeller(Integer orderID, User buyer, User seller, Status status){
         System.out.println("Status of the order number " + orderID +" has changed to " + status);
     }
 }

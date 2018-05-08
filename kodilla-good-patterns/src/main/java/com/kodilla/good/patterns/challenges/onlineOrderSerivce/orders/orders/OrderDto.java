@@ -9,11 +9,19 @@
 package com.kodilla.good.patterns.challenges.onlineOrderSerivce.orders.orders;
 
 public class OrderDto {
-    Order order;
-    boolean status;
+    private Order order;
+    private boolean status;
 
     public OrderDto(Order order, boolean status) {
         this.order = order;
         this.status = status;
+    }
+
+    public Order getOrder() {
+        return order;
+    }
+
+    public boolean isStatus() {
+        return status;
     }
 }
