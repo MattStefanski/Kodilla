@@ -10,6 +10,8 @@ package com.kodilla.good.patterns.challenges;
 
 public class Repository {
 
-    void saveOrder(Order order){};
+    void saveOrder(Order order){
+
+    };
 
 }
