@@ -1,15 +1,13 @@
 /*
- * Created by Matt Stefanski on 5/8/18 8:40 PM
+ * Created by Matt Stefanski on 5/9/18 10:47 AM
  *
  * Copyright (c) 2018. All rights reserved
  *
- * Last modified 5/8/18 8:38 PM
+ * Last modified 5/9/18 10:45 AM
  */
 
-package com.kodilla.good.patterns.challenges.onlineOrderSerivce.orders.orders;
+package com.kodilla.good.patterns.challenges.online.order.serivce.orders;
 
-
-import com.kodilla.good.patterns.challenges.onlineOrderSerivce.users.User.User;
 
 public class ProductOrderService {
 
