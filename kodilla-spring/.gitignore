@@ -26,7 +26,6 @@ hs_err_pid*
 ### Gradle template
 
 
-
 /.idea
 /.gradle
 
@@ -45,3 +44,9 @@ gradle-app.setting
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
 
+!/out/
+/gradlew
+/gradlew.bat
+/gradle/
+/out/
+/settings.gradle
