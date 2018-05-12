@@ -49,4 +49,6 @@ gradle-app.setting
 /gradlew.bat
 /gradle/
 /out/
+
 /settings.gradle
+

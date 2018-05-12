@@ -1,5 +1,6 @@
 package com.kodilla.spring;
 
+
 import com.kodilla.spring.shape.Circle;
 import com.kodilla.spring.shape.Shape;
 import com.kodilla.spring.shape.Triangle;
@@ -9,11 +10,13 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SpringRunnerTests {
+
 	@Test
 	public void testCircleLoadedIntoContainer() {
 		//Given
@@ -38,3 +41,4 @@ public class SpringRunnerTests {
 		Assert.assertEquals("This is a triangle.", name);
 	}
 }
+
