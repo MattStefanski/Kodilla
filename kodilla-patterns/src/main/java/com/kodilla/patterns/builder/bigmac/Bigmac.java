@@ -44,11 +44,11 @@ public class Bigmac   {
             return this;
         }
         public Bigmac build() {
-            //if (sauce.equals(null) || bun.equals(null) || ingredients.size()<1){
-            //    throw new IllegalStateException("Illegal composition");
-            //} else {
+            if (sauce.equals(null) || bun.equals(null) || ingredients.size()<1){
+                throw new IllegalStateException("Illegal composition");
+            } else {
                 return new Bigmac(bun, sauce, ingredients);
-            //}
+            }
 
         }
 
