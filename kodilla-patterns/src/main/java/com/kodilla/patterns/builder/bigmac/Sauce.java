@@ -9,6 +9,6 @@
 package com.kodilla.patterns.builder.bigmac;
 
 public enum Sauce {
-    standard,thousandsIslands,barbecue
+   STANDARD, THOUSAND_ISLANDS,BARBECUE
 
 }

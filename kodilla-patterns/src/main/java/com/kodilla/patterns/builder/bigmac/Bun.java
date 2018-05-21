@@ -9,5 +9,5 @@
 package com.kodilla.patterns.builder.bigmac;
 
 public enum Bun {
-    SESAME,NOTSESAME
+    SESAME,NOT_SESAME
 }

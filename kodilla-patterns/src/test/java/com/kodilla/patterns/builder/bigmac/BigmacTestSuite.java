@@ -18,11 +18,11 @@ public class BigmacTestSuite {
     public void testGetIngredients(){
         //Given
     Bigmac bigmac= new Bigmac.BigmacBuilder()
-            .bun(Bun.NOTSESAME)
-            .sauce(Sauce.standard)
-            .ingredient(Ingredients.onion)
-            .ingredient(Ingredients.bacon)
-            .ingredient(Ingredients.cheese)
+            .bun(Bun.NOT_SESAME)
+            .sauce(Sauce.STANDARD)
+            .ingredient(Ingredients.ONION)
+            .ingredient(Ingredients.BECON)
+            .ingredient(Ingredients.CHEESE)
             .build();
 
         //When
@@ -39,11 +39,11 @@ public class BigmacTestSuite {
     public void testGetSauce(){
         //Given
         Bigmac bigmac= new Bigmac.BigmacBuilder()
-                .bun(Bun.NOTSESAME)
-                .sauce(Sauce.standard)
-                .ingredient(Ingredients.onion)
-                .ingredient(Ingredients.bacon)
-                .ingredient(Ingredients.cheese)
+                .bun(Bun.NOT_SESAME)
+                .sauce(Sauce.STANDARD)
+                .ingredient(Ingredients.ONION)
+                .ingredient(Ingredients.BECON)
+                .ingredient(Ingredients.CHEESE)
                 .build();
 
         //When
@@ -52,7 +52,7 @@ public class BigmacTestSuite {
 
         //Then
 
-        Assert.assertEquals(Sauce.standard,sauce);
+        Assert.assertEquals(Sauce.STANDARD,sauce);
     }
 
 
@@ -60,11 +60,11 @@ public class BigmacTestSuite {
     public void testGetBun(){
         //Given
         Bigmac bigmac= new Bigmac.BigmacBuilder()
-                .bun(Bun.NOTSESAME)
-                .sauce(Sauce.standard)
-                .ingredient(Ingredients.onion)
-                .ingredient(Ingredients.bacon)
-                .ingredient(Ingredients.cheese)
+                .bun(Bun.NOT_SESAME)
+                .sauce(Sauce.STANDARD)
+                .ingredient(Ingredients.ONION)
+                .ingredient(Ingredients.BECON)
+                .ingredient(Ingredients.CHEESE)
                 .build();
 
         //When
@@ -73,6 +73,6 @@ public class BigmacTestSuite {
 
         //Then
 
-        Assert.assertEquals(Bun.NOTSESAME,bun);
+        Assert.assertEquals(Bun.NOT_SESAME,bun);
     }
 }
