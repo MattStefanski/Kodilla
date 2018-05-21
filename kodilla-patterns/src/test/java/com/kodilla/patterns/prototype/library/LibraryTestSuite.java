@@ -30,28 +30,28 @@ public class LibraryTestSuite {
         library1.getBooks().add(book2);
 
 
-        Library library2 = null;
-        Library library3 = null;
+        Library shallowCopiedLib = null;
+        Library deepCopiedLib = null;
         try {
-            library2 = library1.shallowCopy();
+            shallowCopiedLib = library1.shallowCopy();
         } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
         try {
-            library3 = library1.deepCopy();
+            deepCopiedLib = library1.deepCopy();
         } catch (CloneNotSupportedException e) {
             System.out.println(e);
         }
 
-        library3.getBooks().add(book3);
+        deepCopiedLib.getBooks().add(book3);
         library1.getBooks().remove(book1);
 
 
         //Then
 
         Assert.assertEquals(1, library1.getBooks().size());
-        Assert.assertEquals(1, library2.getBooks().size());
-        Assert.assertEquals(3, library3.getBooks().size());
+        Assert.assertEquals(1, shallowCopiedLib.getBooks().size());
+        Assert.assertEquals(3, deepCopiedLib.getBooks().size());
 
 
     }
