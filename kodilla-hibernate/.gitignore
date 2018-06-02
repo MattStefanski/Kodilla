@@ -12,7 +12,6 @@
 .springBeans
 
 ### IntelliJ IDEA ###
-.out
 *out*
 .idea
 *.iws
@@ -28,3 +27,4 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+.gitignore
