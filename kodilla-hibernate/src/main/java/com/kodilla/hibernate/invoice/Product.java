@@ -14,13 +14,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name="PRODUCT")
+@Table(name = "PRODUCTS")
 public class Product {
 
     private Integer id;
     private String name;
-    private List<Item> items=new ArrayList<Item>();
+    private List<Item> items = new ArrayList<Item>();
 
+    public Product() {
+
+    }
 
     public Product(String name) {
         this.name = name;
@@ -28,7 +31,7 @@ public class Product {
 
     @Id
     @GeneratedValue
-    @Column(name="ID",unique = true)
+    @Column(name = "ID", unique = true)
     public Integer getId() {
         return id;
     }
@@ -38,7 +41,7 @@ public class Product {
     }
 
     @NotNull
-    @Column(name="ProductName")
+    @Column(name = "ProductName")
     public String getName() {
         return name;
     }
@@ -46,10 +49,11 @@ public class Product {
     public void setName(String name) {
         this.name = name;
     }
+
     @OneToMany(targetEntity = Item.class,
-    mappedBy = "product",
-    cascade = CascadeType.ALL,
-    fetch = FetchType.LAZY
+            mappedBy = "product",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
     )
     public List<Item> getItems() {
         return items;

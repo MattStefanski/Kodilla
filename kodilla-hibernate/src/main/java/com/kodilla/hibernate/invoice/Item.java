@@ -12,6 +12,9 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
+
+@Entity
+@Table(name = "ITEMS")
 public class Item {
 
     private Integer id;
@@ -21,19 +24,23 @@ public class Item {
     private BigDecimal value;
     private Invoice invoice;
 
+    public Item() {
+
+    }
+
     public Item(Product product, BigDecimal price, int quantity,
                 Invoice invoice) {
         this.product = product;
         this.price = price;
         this.quantity = quantity;
         this.value = price.multiply(BigDecimal.valueOf(quantity));
-        this.invoice=invoice;
+        this.invoice = invoice;
     }
 
 
     @Id
     @GeneratedValue
-    @Column(name="ID",unique = true)
+    @Column(name = "ID", unique = true)
     public Integer getId() {
         return id;
     }
@@ -43,7 +50,7 @@ public class Item {
     }
 
     @ManyToOne
-    @JoinColumn(name="ProuctID")
+    @JoinColumn(name = "Prouct_ID")
     public Product getProduct() {
         return product;
     }
@@ -53,7 +60,7 @@ public class Item {
     }
 
     @NotNull
-    @Column(name="PRICE")
+    @Column(name = "PRICE")
     public BigDecimal getPrice() {
         return price;
     }
@@ -64,7 +71,7 @@ public class Item {
     }
 
     @NotNull
-    @Column(name="ID")
+    @Column(name = "QUANTITY")
     public int getQuantity() {
         return quantity;
     }
@@ -74,7 +81,7 @@ public class Item {
     }
 
     @NotNull
-    @Column(name="ID")
+    @Column(name = "VALUE")
     public BigDecimal getValue() {
         return value;
     }
@@ -84,8 +91,8 @@ public class Item {
     }
 
     @ManyToOne
-    @JoinColumn(name="INVOICE_ID")
-    public Invoice getInvoice(){
+    @JoinColumn(name = "INVOICE_ID")
+    public Invoice getInvoice() {
         return invoice;
     }
 

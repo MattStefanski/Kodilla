@@ -18,5 +18,4 @@ import javax.transaction.Transactional;
 public interface ProductDao extends CrudRepository<Product,Integer> {
 
 
-
 }
