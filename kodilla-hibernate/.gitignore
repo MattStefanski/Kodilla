@@ -19,7 +19,6 @@
 *.ipr
 *iml
 *gradlew*
-*settings.gradle
 ### NetBeans ###
 nbproject/private/
 build/
