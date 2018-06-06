@@ -19,6 +19,7 @@
 *.ipr
 *iml
 *gradlew*
+
 ### NetBeans ###
 nbproject/private/
 build/
@@ -27,3 +28,4 @@ dist/
 nbdist/
 .nb-gradle/
 .gitignore
+/kodilla-hibernate/gradle/
