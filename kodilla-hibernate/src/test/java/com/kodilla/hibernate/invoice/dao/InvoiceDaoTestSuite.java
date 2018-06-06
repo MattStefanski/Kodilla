@@ -9,6 +9,7 @@
 package com.kodilla.hibernate.invoice.dao;
 
 import com.kodilla.hibernate.invoice.*;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,6 +23,7 @@ import java.util.ArrayList;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class InvoiceDaoTestSuite {
+
 
     @Autowired
     private ProductDao productDao;
