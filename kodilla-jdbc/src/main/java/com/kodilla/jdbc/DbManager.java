@@ -20,8 +20,8 @@ public class DbManager {
 
     private DbManager() throws SQLException {
         Properties connectionProps = new Properties();
-        connectionProps.put("user", "mateusz");
-        connectionProps.put("password", "kodilla");
+        connectionProps.put("user", "root");
+        connectionProps.put("password", "KodillaKodilla");
         conn = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/ms?serverTimezone=Europe/Warsaw&useSSL=False",
                 connectionProps);
