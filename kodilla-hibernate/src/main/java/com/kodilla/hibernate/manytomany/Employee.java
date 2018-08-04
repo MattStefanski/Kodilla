@@ -14,11 +14,22 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedNativeQuery(
-        name = "Employee.findEmployeeByLastName",
-        query = "SELECT * FROM EMPLOYEES WHERE LASTNAME LIKE :NameParam",
-        resultClass = Employee.class
+@NamedNativeQueries(
+        {
+                @NamedNativeQuery(
+                        name = "Employee.findEmployeeByLastName",
+                        query = "SELECT * FROM EMPLOYEES WHERE LASTNAME LIKE :NameParam",
+                        resultClass = Employee.class
+                ),
+                @NamedNativeQuery(
+                        name = "Employee.findEmployeeByAnyName",
+                        query = "SELECT * FROM EMPLOYEES WHERE LOWER(LASTNAME) LIKE lower(CONCAT('%',:NameParam,'%')) or " +
+                                "LOWER(FIRSTNAME) LIKE lower(CONCAT('%',:NameParam,'%'))",
+                        resultClass = Employee.class
+                )
+        }
 )
+
 
 
 @Entity

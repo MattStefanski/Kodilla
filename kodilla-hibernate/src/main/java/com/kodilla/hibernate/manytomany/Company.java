@@ -13,11 +13,20 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 
+@NamedNativeQueries(
+        {
+                @NamedNativeQuery(
+                        name = "Company.findCompanyNameStartsWith",
+                        query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE CONCAT(SUBSTRING(:startWithParam,1,3),'%')",
+                        resultClass = Company.class
+                ),
+                @NamedNativeQuery(
+                        name = "Company.findCompanyByName",
+                        query = "SELECT * FROM COMPANIES WHERE LOWER(COMPANY_NAME) LIKE CONCAT('%',LOWER(:param),'%')",
+                        resultClass = Company.class
+                )
 
-@NamedNativeQuery(
-        name = "Company.findCompanyNameStartsWith",
-        query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE CONCAT(SUBSTRING(:startWithParam,1,3),'%')",
-        resultClass = Company.class
+        }
 )
 
 

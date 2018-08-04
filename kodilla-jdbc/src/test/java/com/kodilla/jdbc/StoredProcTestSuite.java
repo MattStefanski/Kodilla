@@ -34,7 +34,6 @@ public class StoredProcTestSuite {
         if(result.next()) {
             howMany = result.getInt("n_bestselers");
         }
-        //Then
         Assert.assertEquals(1,howMany);
     }
 
