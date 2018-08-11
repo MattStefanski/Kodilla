@@ -1,15 +1,16 @@
 /*
- * Created by Matt Stefanski on 8/6/18 8:10 PM
+ * Created by Matt Stefanski on 8/11/18 11:55 AM
  *
  * Copyright (c) 2018. All rights reserved
  *
- * Last modified 8/6/18 8:02 PM
+ * Last modified 8/11/18 11:50 AM
  */
 
-package com.kodilla.patterns2;
+package com.kodilla.patterns2.facade.api;
 
-import facade.Item;
-import facade.Order;
+import com.kodilla.patterns2.Authenticator;
+import com.kodilla.patterns2.facade.Item;
+import com.kodilla.patterns2.facade.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;

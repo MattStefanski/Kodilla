@@ -1,17 +1,14 @@
 /*
- * Created by Matt Stefanski on 8/6/18 8:06 PM
+ * Created by Matt Stefanski on 8/11/18 11:50 AM
  *
  * Copyright (c) 2018. All rights reserved
  *
- * Last modified 8/6/18 8:03 PM
+ * Last modified 8/6/18 8:11 PM
  */
 
-package com.kodilla.patterns2;
+package com.kodilla.patterns2.facade.api;
 
 
-import facade.api.ItemDto;
-import facade.api.OrderDto;
-import facade.api.OrderProcessingException;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

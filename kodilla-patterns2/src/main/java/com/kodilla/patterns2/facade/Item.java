@@ -1,12 +1,12 @@
 /*
- * Created by Matt Stefanski on 8/6/18 6:49 PM
+ * Created by Matt Stefanski on 8/11/18 11:48 AM
  *
  * Copyright (c) 2018. All rights reserved
  *
- * Last modified 8/6/18 6:49 PM
+ * Last modified 8/6/18 6:56 PM
  */
 
-package facade;
+package com.kodilla.patterns2.facade;
 
 public class Item {
 

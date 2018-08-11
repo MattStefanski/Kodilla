@@ -1,14 +1,14 @@
 /*
- * Created by Matt Stefanski on 8/6/18 6:50 PM
+ * Created by Matt Stefanski on 8/11/18 11:48 AM
  *
  * Copyright (c) 2018. All rights reserved
  *
- * Last modified 8/6/18 6:50 PM
+ * Last modified 8/6/18 8:11 PM
  */
 
-package facade;
+package com.kodilla.patterns2.facade;
 
-import com.kodilla.patterns2.ProductService;
+import com.kodilla.patterns2.facade.api.ProductService;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

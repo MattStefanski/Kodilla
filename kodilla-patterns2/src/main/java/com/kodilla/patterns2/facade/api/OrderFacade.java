@@ -1,32 +1,30 @@
 /*
- * Created by Matt Stefanski on 8/6/18 8:08 PM
+ * Created by Matt Stefanski on 8/11/18 11:49 AM
  *
  * Copyright (c) 2018. All rights reserved
  *
- * Last modified 8/6/18 7:58 PM
+ * Last modified 8/11/18 11:40 AM
  */
 
-package com.kodilla.patterns2;
+package com.kodilla.patterns2.facade.api;
 
-import facade.api.ItemDto;
-import facade.api.OrderDto;
-import facade.api.OrderProcessingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
-@Service
+
 @EnableAspectJAutoProxy
+@Component
 public class OrderFacade {
     @Autowired
     private ShopService shopService;
     private static final Logger LOGGER = LoggerFactory.getLogger(OrderFacade.class);
 
-    public void processOrder(final OrderDto order, final Long userId) throws OrderProcessingException {
+    public void processOrder(OrderDto order,Long userId) throws OrderProcessingException {
         boolean wasError = false;
         long orderId = shopService.openOrder(userId);
         LOGGER.info("Registering new order, ID: " + orderId);

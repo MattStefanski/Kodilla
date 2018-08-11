@@ -1,12 +1,12 @@
 /*
- * Created by Matt Stefanski on 8/6/18 8:10 PM
+ * Created by Matt Stefanski on 8/11/18 11:55 AM
  *
  * Copyright (c) 2018. All rights reserved
  *
- * Last modified 8/6/18 7:02 PM
+ * Last modified 8/6/18 8:11 PM
  */
 
-package com.kodilla.patterns2;
+package com.kodilla.patterns2.facade.api;
 
 import org.springframework.stereotype.Service;
 
