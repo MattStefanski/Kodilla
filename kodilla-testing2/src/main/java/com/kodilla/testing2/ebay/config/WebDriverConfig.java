@@ -17,7 +17,7 @@ public class WebDriverConfig {
     public final static String CHROME="CHROME_DRIVER";
 
    public static WebDriver getDriver(final String drive){
-       System.setProperty("webdriver.chrome.driver","/Users/mateusz/Downloads/chromedriver-2");
+       System.setProperty("webdriver.chrome.driver","/Users/mateusz/Downloads/chromedriver-3");
 
    if(drive.equals(CHROME)){
        return new ChromeDriver();
