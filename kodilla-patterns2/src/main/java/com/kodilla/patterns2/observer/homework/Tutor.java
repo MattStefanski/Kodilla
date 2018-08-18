@@ -12,7 +12,7 @@ package com.kodilla.patterns2.observer.homework;
 public class Tutor implements Observer {
 
     private String tutorName;
-    private Long updateCount = 0l;
+    private int updateCount = 0;
 
 
     public Tutor(String tutorName) {
@@ -32,7 +32,7 @@ public class Tutor implements Observer {
         return tutorName;
     }
 
-    public Long getUpdateCount() {
+    public int getUpdateCount() {
         return updateCount;
     }
 }

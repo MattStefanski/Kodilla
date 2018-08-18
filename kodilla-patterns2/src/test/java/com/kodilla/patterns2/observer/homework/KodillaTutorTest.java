@@ -36,8 +36,8 @@ public class KodillaTutorTest {
         studentHomeworkQueueMStefanski.addHomework(new Homework(20, 4, "some url4"));
         //Then
 
-        Assert.assertEquals(2, studentHomeworkQueueJKowalski.getHomeworks().size());
-        Assert.assertEquals(4, studentHomeworkQueueMStefanski.getHomeworks().size());
+        Assert.assertEquals(4, AKwasniewski.getUpdateCount());
+        Assert.assertEquals(2, KKononowicz.getUpdateCount());
     }
 
 }
